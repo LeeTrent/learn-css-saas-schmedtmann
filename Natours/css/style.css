@@ -59,6 +59,8 @@ for the h1 tag in header */
     position: absolute;
     top: 40%; /* Relative to parent element */
     left: 50%; /* Relative to parent element */
+
+    text-align: center;
     
     /* Not relative to parent element, 
     but instead relative to this element */
@@ -69,6 +71,7 @@ for the h1 tag in header */
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden; /* Used to smooth animation */
+    margin-bottom: 60px;
 }
 /* Styling for 1st span in H1 */
 .heading-primary-main {
@@ -116,6 +119,102 @@ for the h1 tag in header */
         opacity: 1;
         transform: translate(0);
     }
+}
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/*************************************************************************
+   btn is a link
+   'link' is a psuedo-class which represents the initial state of the link 
+   'visited' is a psuedo-class which represents the state of the link
+   after it has been clicked on.
+*************************************************************************/
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block; /* default in inline for anchor tags */
+    border-radius: 100px;
+    /*************************************************************** 
+     'transition' must be applied to the initial state of this link 
+    ****************************************************************/ 
+    transition: all .2s; 
+    position: relative;
+}
+/*************************************************************************
+   btn is a link
+   link is a psuedo-class which represents the initial state of the link 
+   hover is a psuedo-class which represents the state of the link when
+   the user's mouse is hovering over this link.
+*************************************************************************/
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+/*************************************************************************
+   btn is a link
+   link is a psuedo-class which represents the initial state of the link 
+   active is a psuedo-class which represents the state of the link when it
+   has been clicked 
+*************************************************************************/
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: ""; /* mandatory */
+    display: inline-block; /* mandatory */  
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    /***************************************************
+     Absolute positioning needs to have a 'reference'.
+     The reference is the 1st element that has a 
+     'relative' position. In this case, the 'parent'
+     or 'containing' element that has a relative
+     position is 'btn'.
+    ***************************************************/
+    position: absolute; 
+    top: 0;
+    left: 0;
+    /************************************************
+      z-index specifies the position of the elements
+      if they are 'one on top of the other'. 
+    *************************************************/
+    z-index: -1; /* will be behind 'btn' */
+    /************************************************************************ 
+     'transition' must be applied to the initial state of this psuedo-element 
+    *************************************************************************/ 
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; /* 'fade' psuedo-element out */
+}
+
+.btn-animated {
+    /* animation name, duration, timing funtion, delay */
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
 }
 
 
