@@ -13,17 +13,27 @@ Dark green: #28b485
     box-sizing: border-box;
 }
 
+html {
+    /****************************
+     * Root font-size 
+     * One rem = root font-size
+     * One rem = 10px 
+    *****************************/
+    font-size: 10px;
+    /*****************************/
+}
+
 body {
     /* Inherited by child elements of body */
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
 
     /* Padding applies to body tag only */
     /* (it is not inhereited by child elements) */
-    padding: 30px;
+    padding: 3rem;
 }
 
 .header {
@@ -45,13 +55,13 @@ body {
 /* Logo container div in upper-left hand portion of header */
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 
 }
 /* Logo image contained in .logo-box */
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 /* Styling for div that serves as a container 
 for the h1 tag in header */
@@ -71,14 +81,14 @@ for the h1 tag in header */
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden; /* Used to smooth animation */
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 /* Styling for 1st span in H1 */
 .heading-primary-main {
     display: block; /* span element is inline be default */
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -88,19 +98,19 @@ for the h1 tag in header */
 /* Styling for 2nd span in H1 */
 .heading-primary-sub {
     display: block; /* span element is inline be default */
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out;
 }
 /* Animations */
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
     100% {
         opacity: 1;
@@ -110,10 +120,10 @@ for the h1 tag in header */
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
     100% {
         opacity: 1;
@@ -123,7 +133,7 @@ for the h1 tag in header */
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
     100% {
         opacity: 1;
@@ -141,14 +151,15 @@ for the h1 tag in header */
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block; /* default in inline for anchor tags */
-    border-radius: 100px;
+    border-radius: 10rem;
     /*************************************************************** 
      'transition' must be applied to the initial state of this link 
     ****************************************************************/ 
     transition: all .2s; 
     position: relative;
+    font-size: 1.6rem;
 }
 /*************************************************************************
    btn is a link
@@ -158,7 +169,7 @@ for the h1 tag in header */
 *************************************************************************/
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
 /*************************************************************************
    btn is a link
@@ -168,7 +179,7 @@ for the h1 tag in header */
 *************************************************************************/
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
 .btn-white {
     background-color: #fff;
@@ -180,7 +191,7 @@ for the h1 tag in header */
     display: inline-block; /* mandatory */  
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     /***************************************************
      Absolute positioning needs to have a 'reference'.
      The reference is the 1st element that has a 
@@ -216,5 +227,3 @@ for the h1 tag in header */
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
-
-
