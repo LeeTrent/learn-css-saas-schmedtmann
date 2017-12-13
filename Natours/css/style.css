@@ -22,6 +22,7 @@ html {
      * One rem = 62.5% of default browser font size 
     ************************************************/
     font-size: 62.5%;
+    /* font-size: 50%; */
     /***********************************************/
 }
 
@@ -57,19 +58,19 @@ body {
     /* clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); */
 }
 /* Logo container div in upper-left hand portion of header */
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 
 }
 /* Logo image contained in .logo-box */
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 /* Styling for div that serves as a container 
 for the h1 tag in header */
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%; /* Relative to parent element */
     left: 50%; /* Relative to parent element */
@@ -88,7 +89,7 @@ for the h1 tag in header */
     margin-bottom: 6rem;
 }
 /* Styling for 1st span in H1 */
-.heading-primary-main {
+.heading-primary--main {
     display: block; /* span element is inline be default */
     font-size: 6rem;
     font-weight: 400;
@@ -100,7 +101,7 @@ for the h1 tag in header */
     /* animation-iteration-count: 3; */
 }
 /* Styling for 2nd span in H1 */
-.heading-primary-sub {
+.heading-primary--sub {
     display: block; /* span element is inline be default */
     font-size: 2rem;
     font-weight: 700;
@@ -185,7 +186,7 @@ for the h1 tag in header */
     transform: translateY(-1px);
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -217,7 +218,7 @@ for the h1 tag in header */
     transition: all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -226,7 +227,7 @@ for the h1 tag in header */
     opacity: 0; /* 'fade' psuedo-element out */
 }
 
-.btn-animated {
+.btn--animated {
     /* animation name, duration, timing funtion, delay */
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
