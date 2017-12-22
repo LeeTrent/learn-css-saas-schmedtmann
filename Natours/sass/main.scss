@@ -3,7 +3,7 @@ $color-primary-light:#7ed56f;
 $color-primary-dark:#28b485;
 
 $color-grey-dark: #777;
-
+$color-white: #fff;
 
 *,
 *::after,
@@ -81,7 +81,7 @@ for the h1 tag in header */
 }
 /* Styling for H1 tag */
 .heading-primary {
-    color: #fff;
+    color:$color-white;
     text-transform: uppercase;
     backface-visibility: hidden; /* Used to smooth animation */
     margin-bottom: 6rem;
@@ -185,7 +185,7 @@ for the h1 tag in header */
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
 .btn--white {
-    background-color: #fff;
+    background-color: $color-white;
     color: $color-grey-dark;
 }
 
@@ -217,7 +217,7 @@ for the h1 tag in header */
 }
 
 .btn--white::after {
-    background-color: #fff;
+    background-color: $color-white;
 }
 
 .btn:hover::after {
