@@ -38,30 +38,27 @@ body {
   /* Triangle */
   /* clip-path: polygon(50% 0, 100% 100%, 0 100%); */
   /* Right arrow */
-  /* clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); */ }
-
-/* Logo container div in upper-left hand portion of header */
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-/* Logo image contained in .logo-box */
-.header__logo {
-  height: 3.5rem; }
-
-/* Styling for div that serves as a container 
-for the h1 tag in header */
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  /* Relative to parent element */
-  left: 50%;
-  /* Relative to parent element */
-  text-align: center;
-  /* Not relative to parent element, 
-    but instead relative to this element */
-  transform: translate(-50%, -50%); }
+  /* clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); */
+  /* Logo container div in upper-left hand portion of header */
+  /* Logo image contained in .logo-box */
+  /* Styling for div that serves as a container 
+    for the h1 tag in header */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    /* Relative to parent element */
+    left: 50%;
+    /* Relative to parent element */
+    text-align: center;
+    /* Not relative to parent element, 
+        but instead relative to this element */
+    transform: translate(-50%, -50%); }
 
 /* Styling for H1 tag */
 .heading-primary {
