@@ -1,0 +1,42 @@
+.header {
+    height: 95vh;
+    background-image: 
+    linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); 
+    
+    /**************************************************************************************/
+    /* Triangle */
+    /**************************************************************************************/    
+    /* clip-path: polygon(50% 0, 100% 100%, 0 100%); */
+    /* Right arrow */
+    /* clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); */ 
+    /**************************************************************************************/
+    
+    /* Logo container div in upper-left hand portion of header */
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    /* Logo image contained in .logo-box */
+    &__logo {
+        height: 3.5rem;
+    }
+    /* Styling for div that serves as a container 
+    for the h1 tag in header */
+    &__text-box {
+        position: absolute;
+        top: 40%; /* Relative to parent element */
+        left: 50%; /* Relative to parent element */
+
+        text-align: center;
+        
+        /* Not relative to parent element, 
+        but instead relative to this element */
+        transform: translate(-50%, -50%);
+    }
+  }

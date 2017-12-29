@@ -1,0 +1,24 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /************************************************
+     * Root font-size 
+     * One rem = root font-size
+     * One rem = 62.5% of default browser font size 
+    *************************************************
+     * This defines what 1rem:
+    ************************************************/
+    font-size: 62.5%;
+    /* font-size: 50%; */
+    /***********************************************/
+}
+
+body {
+    box-sizing: border-box;
+}

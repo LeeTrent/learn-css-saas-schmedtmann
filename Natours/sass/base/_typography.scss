@@ -1,0 +1,41 @@
+body {
+    /* Inherited by child elements of body */
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $color-grey-dark;
+
+    /* Padding applies to body tag only */
+    /* (it is not inhereited by child elements) */
+    padding: 3rem;
+}
+
+/* Styling for H1 tag */
+.heading-primary {
+    color:$color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden; /* Used to smooth animation */
+    margin-bottom: 6rem;
+
+    /* Styling for 1st span in H1 */
+    &--main {
+        display: block; /* span element is inline be default */
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        /* animation-delay: 3s; */
+        /* animation-iteration-count: 3; */
+    }
+    /* Styling for 2nd span in H1 */
+    &--sub {
+        display: block; /* span element is inline be default */
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+    }
+}
