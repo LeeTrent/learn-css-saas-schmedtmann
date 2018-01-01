@@ -1,3 +1,4 @@
+// BEGIN: body
 body {
     /* Inherited by child elements of body */
     font-family: "Lato", sans-serif;
@@ -10,8 +11,10 @@ body {
     /* (it is not inhereited by child elements) */
     padding: 3rem;
 }
+// END: body
 
-/* Styling for H1 tag */
+// BEGIN: .heading-primary 
+// (styling for H1 tag)
 .heading-primary {
     color:$color-white;
     text-transform: uppercase;
@@ -39,3 +42,53 @@ body {
         animation: moveInRight 1s ease-out;
     }
 }
+//END: .heading-primary 
+
+// BEGIN: .heading-secondary
+// (styling for H2 tag)
+.heading-secondary {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+
+    ////////////////////////////////////////////////////////////
+    // display: inline-block;
+    ////////////////////////////////////////////////////////////
+    // Change display to 'inline-block' so that this H2 element
+    // doesn't occupy the entire width of page but instead
+    // occupies the width of the text
+    ////////////////////////////////////////////////////////////
+    display: inline-block;
+    ////////////////////////////////////////////////////////////
+
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+
+    //////////////////////////////////////////////////////////
+    // -webkit-background-clip: text;
+    //////////////////////////////////////////////////////////
+    // Makes the background-image appear only behind the text
+    //////////////////////////////////////////////////////////
+    -webkit-background-clip: text;
+    //////////////////////////////////////////////////////////
+    
+    //////////////////////////////////////////////////////////
+    // color: transparent;
+    //////////////////////////////////////////////////////////
+    // Makes the color of the text transparent so that you
+    // can see the background-image in lieu of text color
+    //////////////////////////////////////////////////////////    
+    color: transparent;
+    //////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////
+    // Visual effect - tilt text
+    //////////////////////////////////////////////////////////
+    transition: all 0.2s;
+    &:hover {
+        transform: skewX(15deg) skewY(2deg) scale(1.1);
+        text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.25);
+    }
+    //////////////////////////////////////////////////////////
+}
+// END: .heading-secondary
